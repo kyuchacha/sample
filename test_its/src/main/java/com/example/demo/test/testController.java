@@ -1,22 +1,30 @@
 package com.example.demo.test;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class testController {
 
 	@GetMapping("/")
+	
 	public String index() {
-		System.out.println("???????????!!!!!!!!!?");
 		return "index";
 	}
 	
-	@GetMapping("/hello")
-	public String hello() {
-		System.out.println("HELLO");
+	@RequestMapping("/hello")
+	public String hello(@RequestParam Map<String, Object> param, ModelMap model) {
+		param.put("test", "111");
+		model.put("test2", "modelandview");
+		model.addAttribute("test3",param);
 		return "hello";
 	}
+
 	
 }
