@@ -9,7 +9,7 @@
 <script>
 function fnTest(){
 	alert('?');
-	$(location).attr('href','http://localhost:9050/its/hello');
+	$(location).attr('href','http://localhost:8088/its/hello');
 }
 </script>
 </head>
