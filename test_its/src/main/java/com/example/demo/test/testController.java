@@ -20,9 +20,9 @@ public class testController {
 	
 	@RequestMapping("/hello")
 	public String hello(@RequestParam Map<String, Object> param, ModelMap model) {
-		param.put("test", "111");
 		model.put("test2", "modelandview");
-		model.addAttribute("test3",param);
+		model.put("test3","ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ");
+		model.put("test4", "되는겁니까?????????????????????");
 		return "hello";
 	}
 
