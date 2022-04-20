@@ -9,11 +9,14 @@ public class testController {
 
 	@GetMapping("/")
 	public String index() {
-		System.out.println("????????????");
+		System.out.println("???????????!!!!!!!!!?");
 		return "index";
 	}
+	
 	@GetMapping("/hello")
 	public String hello() {
-		return "hello!!!";
+		System.out.println("HELLO");
+		return "hello";
 	}
+	
 }
