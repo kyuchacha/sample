@@ -21,8 +21,8 @@ public class testController {
 	@RequestMapping("/hello")
 	public String hello(@RequestParam Map<String, Object> param, ModelMap model) {
 		model.put("test2", "modelandview!!!!!!!!!!");
-		model.put("test3","zzzzzzzzzzzzz");
-		model.put("test4", "되는겁니까?????????????????????");
+		model.put("test3","@@@@@@@@@@@@@@@@@@@@@@@");
+		model.put("test4", "성공?????????????????????");
 		return "hello";
 	}
 	
