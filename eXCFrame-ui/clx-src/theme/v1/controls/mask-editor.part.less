@@ -1,0 +1,30 @@
+@import "../custom-settings.part.less";
+
+/* 마스크 에디터 루트 */
+.cl-maskeditor {
+	font: @font-base;
+	border: @input-border-base;
+	background-color: @input-background-color;
+	background-image: @input-background-image;
+	color: @input-text-color;
+	text-align: center;
+	transition: @transition-base;
+
+	/* 마스크 에디터 텍스트 */
+	.cl-text {
+		padding: @input-padding-0 @input-padding-x;
+	}
+
+	/* 마스크 에디터 - 포커스 */
+	&.cl-focus {
+		border-color: @input-focus-border-color;
+	}
+
+	/* 마스크 에디터 - disabled */
+	&.cl-disabled {
+		border-color: @input-disabled-border-color;
+		background-color: @input-disabled-background-color;
+		color: @input-disabled-text-color;
+	}
+}
+

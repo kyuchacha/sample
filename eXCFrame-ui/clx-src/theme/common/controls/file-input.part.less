@@ -1,0 +1,73 @@
+@import "../custom-settings.part.less";
+
+@fileinput-button-width: 70px;
+
+ /* 파일 인풋 루트 */
+.cl-fileinput {
+	font: @font-base;
+	color: @input-text-color;
+ 	background-color: @input-background-color;
+	border: @input-border-base;
+	text-align: left;
+	cursor: pointer;
+	transition: @transition-base;
+	
+	/*autoSize 설정시 표시되는 기본크기*/
+	min-width: 100px;
+	min-height: 25px;
+
+	/* 파일 인풋 내 텍스트 */
+	.cl-text {
+		padding: @input-padding-0 @input-padding-x;
+		padding-right: calc(@input-padding-x + @fileinput-button-width);
+		
+		&.cl-placeholder {
+			color: @input-placeholder-text-color !important;
+		}
+	}
+	
+		/* 파일 인풋 내 클리어 버튼 */
+	.cl-fileinput-clear {
+		padding-right: calc(@fileinput-button-width + 10px);
+	}
+	
+	&:before {
+		content: "Browse";
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: @fileinput-button-width;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-left: @input-border-base;
+		background-color: @gray-100;
+		color: @input-text-color;
+		transition: @transition-base;
+	}
+	
+	/* 포커스 상태 */
+	&:focus{
+		border-color: @input-focus-border-color;
+		
+		&:before {
+			content : "Browse";
+			border-left-color: @input-focus-border-color;
+		}
+	}
+	
+	&.cl-disabled {
+		border-color: @input-disabled-border-color;
+		background-color: @input-disabled-background-color;
+		color: @input-disabled-text-color;
+		cursor: default;
+		
+		&:before {
+			content: "Browse";
+			border-left-color: @input-disabled-border-color;
+			background-color: @input-disabled-background-color;
+			color: @input-disabled-text-color;			
+		}
+	}
+}

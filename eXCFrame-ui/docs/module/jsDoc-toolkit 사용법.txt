@@ -1,0 +1,16 @@
+1. jsDoc-toolkit 을 아래 url에서 다운로드 받습니다.
+https://code.google.com/archive/p/jsdoc-toolkit/downloads
+
+2. 압축을 풀고 이클립스에서 상단 메뉴 Run > External Tools > External Tools Configurations 항목을 선택합니다.
+
+3. Program을 추가합니다.
+ - Name : jsDoc
+ - Location : 자바실행파일 경로를 지정합니다. jre나 jdk가 설치된 경로를 지정합니다.
+   ex) C:\eclipse-neon\tools\jdk1.8.0_261\bin\java.exe
+ - Working Directory : jsdoc-toolkit 이 설치된 경로를 지정합니다.
+   ex) C:\eclipse-neon\tools\jsdoc_toolkit-2.4.0\jsdoc_toolkit-2.4.0\jsdoc-toolkit
+ - Arguments : 아래 실행 형식을 본인 경로에 맞게 작성합니다.
+      -jar jsrun.jar app/run.js 문서화할 자바스크립트 경로 -t=templates/jsdoc -d=문서가 생성될 폴더
+   ex)-jar jsrun.jar app/run.js C:\eclipse-neon\workspace\eXCFrame-ui\clx-src\module -t=templates/jsdoc -d=C:\eclipse-neon\workspace\eXCFrame-ui\docs\module\doc
+
+4. run을 클릭하여 실행합니다.

@@ -1,0 +1,43 @@
+@import "../custom-settings.part.less";
+ 
+ /************************************************
+ * 로그인 화면 (login.clx)
+ ************************************************/
+
+.cl-container.login-body {
+	background-color: #f9f9f9;
+	
+	.cl-container.login-aside {
+		background-image: url("../images/com/login/anthony-esau-N2zk9yXjmLA-unsplash.jpg");
+		background-position: 0px 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	
+	.cl-container.login-form {
+		.cl-output.login-txt {
+			font-size: 36px;
+			font-weight: @font-weight-bold;
+		}
+		
+		.cl-inputbox.form-control {
+			background-color: @secondary-dim;
+			border-color: @secondary-dim;
+			border-radius: @border-radius-lg;
+			font-size: 16px;
+			
+			.cl-text {
+				padding: @input-padding-0 (@input-padding-sm-x * 2.5);
+			}
+			
+			&.cl-focus {
+				background-color: @light;
+				border-color: @light;
+			}
+		}
+		
+		.cl-button.btn-login {
+			font-size: @h4-font-size;
+		}
+	}
+}
